@@ -11,8 +11,7 @@ spring:
       max-lifetime: 1800000
   jpa:
     hibernate:
-      ddl-auto: create
-       # Never auto-alter schema in production
+      ddl-auto: validate # Never auto-alter schema in production
     show-sql: false
 
 logging:
@@ -22,3 +21,4 @@ logging:
 
 server:
   port: ${PORT:8080}
+
