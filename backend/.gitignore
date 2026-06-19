@@ -1,0 +1,23 @@
+# Local config with secrets - never commit
+src/main/resources/application-dev.yml
+
+# Maven build output
+target/
+
+# Compiled class files
+*.class
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
