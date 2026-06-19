@@ -1,12 +1,14 @@
 package com.expensetracker.category;
 
-import com.expensetracker.user.User;
-import lombok.RequiredArgsConstructor;
+import java.util.List;
+
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import com.expensetracker.user.User;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
@@ -31,7 +33,7 @@ public class CategoryService {
             .name(dto.getName())
             .color(dto.getColor())
             .icon(dto.getIcon())
-            .system(false)
+            .isSystem(false)
             .build();
         return CategoryResponseDTO.from(categoryRepository.save(category));
     }
